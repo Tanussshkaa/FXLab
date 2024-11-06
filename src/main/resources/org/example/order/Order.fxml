@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox alignment="CENTER" spacing="50" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.order.OrderController">
+    <VBox alignment="CENTER" spacing="10">
+        <Label fx:id="labelPaste" text="Паста" />
+        <Label fx:id="labelPizza" text="Пицца"/>
+        <Label fx:id="labelSoup" text="Суп"/>
+    </VBox>
+    <VBox alignment="CENTER" spacing="10">
+        <Label text="10$"/>
+        <Label text="15$"/>
+        <Label text="20$"/>
+    </VBox>
+    <VBox alignment="CENTER" spacing="10">
+        <Label fx:id="countPaste" text="0"/>
+        <Label fx:id="countPizza" text="0"/>
+        <Label fx:id="countSoup" text="0"/>
+        <Button fx:id="calculate" text="Посчитать"/>
+    </VBox>
+    <VBox alignment="CENTER" spacing="10">
+        <Button fx:id="addPaste" text="+" onAction="#toggleAddPaste"/>
+        <Button fx:id="addPizza" text="+" onAction="#toggleAddPizza"/>
+        <Button fx:id="addSoup" text="+" onAction="#toggleAddSoup"/>
+    </VBox>
+    <VBox alignment="CENTER" spacing="10">
+        <Button fx:id="subPaste" text="-" onAction="#toggleSubPaste"/>
+        <Button fx:id="subPizza" text="-" onAction="#toggleSubPizza"/>
+        <Button fx:id="subSoup" text="-" onAction="#toggleSubSoup"/>
+    </VBox>
+</HBox>
