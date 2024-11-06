@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="org.example.calculator.CalculatorController">
+
+    <TextField fx:id="display" GridPane.columnSpan="4" alignment="CENTER" editable="false" maxWidth="100"/>
+
+    <Button text="7" onAction="#onNumberClick" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+    <Button text="8" onAction="#onNumberClick" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+    <Button text="9" onAction="#onNumberClick" GridPane.rowIndex="1" GridPane.columnIndex="2" />
+    <Button text="/" onAction="#onOperatorClick" GridPane.rowIndex="1" GridPane.columnIndex="3" />
+
+    <Button text="4" onAction="#onNumberClick" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+    <Button text="5" onAction="#onNumberClick" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+    <Button text="6" onAction="#onNumberClick" GridPane.rowIndex="2" GridPane.columnIndex="2" />
+    <Button text="*" onAction="#onOperatorClick" GridPane.rowIndex="2" GridPane.columnIndex="3" />
+
+    <Button text="1" onAction="#onNumberClick" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+    <Button text="2" onAction="#onNumberClick" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+    <Button text="3" onAction="#onNumberClick" GridPane.rowIndex="3" GridPane.columnIndex="2" />
+    <Button text="-" onAction="#onOperatorClick" GridPane.rowIndex="3" GridPane.columnIndex="3" />
+
+    <Button text="0" onAction="#onNumberClick" GridPane.rowIndex="4" GridPane.columnIndex="0" />
+    <Button text="." onAction="#onNumberClick" GridPane.rowIndex="4" GridPane.columnIndex="1" />
+    <Button text="=" onAction="#onEqualsClick" GridPane.rowIndex="4" GridPane.columnIndex="2" />
+    <Button text="+" onAction="#onOperatorClick" GridPane.rowIndex="4" GridPane.columnIndex="3" />
+
+    <Button text="C" onAction="#onClearClick" GridPane.rowIndex="5" GridPane.columnSpan="4" />
+</GridPane>

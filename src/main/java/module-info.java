@@ -7,8 +7,10 @@ module org.example.wordswapper {
     opens org.example.wordswitcher to javafx.fxml;
     opens org.example.checkbox to javafx.fxml;
     opens org.example.order to javafx.fxml;
+    opens org.example.calculator to javafx.fxml;
     exports org.example.checkbox;
     exports org.example.wordswitcher;
     exports org.example.order;
+    exports org.example.calculator;
 }
 
