@@ -17,18 +17,27 @@ public class OrderController {
     private Label countSoup;
 
     @FXML
+    private Label pricePaste;
+
+    @FXML
+    private Label pricePizza;
+
+    @FXML
+    private Label priceSoup;
+
+    @FXML
     private void toggleAddPaste() {
         countPaste.setText(Integer.toString(Integer.parseInt(countPaste.getText()) + 1));
     }
 
     @FXML
     private void toggleAddPizza() {
-        countPaste.setText(Integer.toString(Integer.parseInt(countPaste.getText()) + 1));
+        countPizza.setText(Integer.toString(Integer.parseInt(countPizza.getText()) + 1));
     }
 
     @FXML
     private void toggleAddSoup() {
-        countPaste.setText(Integer.toString(Integer.parseInt(countPaste.getText()) + 1));
+        countSoup.setText(Integer.toString(Integer.parseInt(countSoup.getText()) + 1));
     }
 
     @FXML
@@ -71,6 +80,20 @@ public class OrderController {
             alert.setContentText("Нельзя убавить");
             alert.showAndWait();
         }
+    }
+
+    @FXML
+    private void toggleCalculate() {
+        int pricePas = Integer.parseInt(pricePaste.getText()) * Integer.parseInt(countPaste.getText());
+        int pricePiz = Integer.parseInt(pricePizza.getText()) * Integer.parseInt(countPizza.getText());
+        int priceSp = Integer.parseInt(priceSoup.getText()) * Integer.parseInt(countSoup.getText());
+        int sum = pricePas + pricePiz + priceSp;
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Счет");
+        alert.setHeaderText(null);
+        alert.setContentText("Итоговая стоимость: " + sum);
+        alert.showAndWait();
     }
 
 }
